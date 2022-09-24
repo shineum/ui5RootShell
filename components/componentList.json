@@ -1,0 +1,13 @@
+{
+	"results": [
+		{
+			"domain": "com.sample.app.ui5",
+			"project": "demo",
+			"key": "test",
+			"semanticObj": "TEST-display",
+			"componentName": "TestComponent",
+			"text": "Test",
+			"icon": "sap-icon://flight"
+		}
+	]
+}

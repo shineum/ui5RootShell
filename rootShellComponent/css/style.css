@@ -1,0 +1,5 @@
+.formLogin { width: 19rem; margin: 0 auto; }
+.formLogin .sapUiFormBackgrTranslucent { background: transparent !important; }
+.formLogin .formImageLogo { margin-top: 9vh; margin-bottom: 9vh; }
+
+.noPadding .sapMITBContent { padding: 0 !important; }

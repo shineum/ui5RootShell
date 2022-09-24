@@ -1,0 +1,37 @@
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:f="sap.ui.layout.form">
+	<f:Form class="formLogin">
+		<f:layout>
+			<f:ResponsiveGridLayout/>
+		</f:layout>	
+		<f:formContainers>
+			<f:FormContainer>
+				<f:formElements>
+					<f:FormElement>
+						<f:fields>
+							<Image src="{/input/imgUrl}" width="17rem" class="formImageLogo" />
+						</f:fields>
+					</f:FormElement>
+				</f:formElements>
+			</f:FormContainer>
+			<f:FormContainer>
+				<f:formElements>
+					<f:FormElement>
+						<f:fields>
+							<Input placeholder="User" value="{/input/user}"/>
+						</f:fields>
+					</f:FormElement>
+					<f:FormElement>
+						<f:fields>
+							<Input placeholder="Password" value="{/input/password}"/>
+						</f:fields>
+					</f:FormElement>
+					<f:FormElement>
+						<f:fields>
+							<Button text="Log On" press="onPressLogin" />
+						</f:fields>
+					</f:FormElement>
+				</f:formElements>
+			</f:FormContainer>
+		</f:formContainers>
+	</f:Form>
+</core:FragmentDefinition>

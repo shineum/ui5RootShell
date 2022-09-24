@@ -1,0 +1,11 @@
+<mvc:View height="100%"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+	xmlns:f="sap.f"
+  	xmlns:core="sap.ui.core"
+	xmlns:tnt="sap.tnt" 
+	controllerName="com.sample.app.ui5.demo.rootShellComponent.controller.App">
+	<App>
+		<Page showHeader="false" id="rootPage"></Page>
+	</App>
+</mvc:View>

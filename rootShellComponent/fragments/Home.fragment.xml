@@ -1,0 +1,44 @@
+<core:FragmentDefinition 
+	height="100%"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+	xmlns:f="sap.f"
+  	xmlns:core="sap.ui.core"
+	xmlns:tnt="sap.tnt"
+>
+	<tnt:ToolPage id="app">
+		<tnt:header>
+			<f:ShellBar title="Application Title"
+				secondTitle="Short description"
+				showMenuButton="{/shellBar/menuButton/show}"
+				menuButtonPressed="onMenuButtonPress"
+				homeIcon="{/shellBar/logo/imgUrl}"
+				showCopilot="{/shellBar/copilot/show}"
+				showNotifications="{/shellBar/notification/show}"
+				notificationsNumber="{/shellBar/notification/number}"
+				showProductSwitcher="{/shellBar/productSwitcher/show}">
+				<f:profile>
+					<Avatar initials="{/shellBar/avatar/initials}"/>
+				</f:profile>
+				<f:searchManager>
+					<f:SearchManager/>
+				</f:searchManager> 
+			</f:ShellBar>
+		</tnt:header>
+		<tnt:mainContents>
+			<IconTabBar
+				id="idIconTabBarInlineMode"
+				headerMode="Standard"
+				class="sapUiResponsiveContentPadding noPadding"
+				items="{/iconTabBar/items}"
+				selectedKey="{iconTabBar/selectedKey}"
+				select="onSelectIconTabBar">
+				<items>
+					<IconTabFilter text="{text}" key="{key}" icon="{icon}">
+						<core:ComponentContainer name="{name}" manifest="true" async="true"/>									
+					</IconTabFilter>
+				</items>
+			</IconTabBar>			
+		</tnt:mainContents>
+	</tnt:ToolPage>
+</core:FragmentDefinition>
