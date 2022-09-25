@@ -107,16 +107,16 @@ sap.ui.define([
             
             this.oModel.setProperty("/iconTabBar/idxMap", tSemanticObjIdxMap);
             this.oModel.setProperty("/iconTabBar/items", toData);
-          }
 
-          let tSelectedkey = null;
-          if (!HashChanger.getInstance().getHash()) {
-            tSelectedkey = (this.oModel.getProperty("/iconTabBar/items")[0] || {}).key;
-            HashChanger.getInstance().setHash(tSelectedkey);
-          } else {
-            tSelectedkey = HashChanger.getInstance().getHash().split("/")[0];
+            var tSelectedKey = null;
+            if (!HashChanger.getInstance().getHash()) {
+              tSelectedKey = (this.oModel.getProperty("/iconTabBar/items")[0] || {}).key;
+              HashChanger.getInstance().setHash(tSelectedKey);
+            } else {
+              tSelectedKey = HashChanger.getInstance().getHash().split("/")[0];
+            }
+            this.oModel.setProperty("/iconTabBar/selectedKey", tSelectedKey);
           }
-          this.oModel.setProperty("/iconTabBar/selectedKey", tSelectedKey);
         }
 
         , onPressLogin: function() {
@@ -124,7 +124,7 @@ sap.ui.define([
         }
 
         , onSelectIconTabBar: function(pEvt) {
-          let tSemanticObj = pEvt.getSource().getSelectedKey();
+          var tSemanticObj = pEvt.getSource().getSelectedKey();
           HashChanger.getInstance().setHash(tSemanticObj);
         }
 

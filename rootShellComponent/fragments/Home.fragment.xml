@@ -31,7 +31,7 @@
 				headerMode="Standard"
 				class="sapUiResponsiveContentPadding noPadding"
 				items="{/iconTabBar/items}"
-				selectedKey="{iconTabBar/selectedKey}"
+				selectedKey="{/iconTabBar/selectedKey}"
 				select="onSelectIconTabBar">
 				<items>
 					<IconTabFilter text="{text}" key="{key}" icon="{icon}">
