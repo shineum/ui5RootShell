@@ -146,7 +146,7 @@
 									number="{WeightMeasure}" unit="{WeightUnit}"
 									state="{
 										path: 'WeightMeasure',
-										formatter: 'sap.uxap.sample.ObjectPageSubSectionHiddenTitle.Formatter.weightState'
+										formatter: 'com.sample.app.ui5.demo.components.TestComponent.model.formatter.weightState'
 									}" />
 								<ObjectNumber
 										number="{
