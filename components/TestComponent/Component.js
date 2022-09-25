@@ -11,7 +11,7 @@ sap.ui.define([
 ) {
   "use strict";
 
-  return UIComponent.extend("com.sample.app.ui5.demo.components.TestComponent.Component", {
+  return UIComponent.extend("com.sample.app.ui5.demo.TestComponent.Component", {
     metadata: {
       manifest: "json"
     },

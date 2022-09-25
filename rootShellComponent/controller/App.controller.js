@@ -92,21 +92,27 @@ sap.ui.define([
         , _setPageHomeMenuItems: function() {
           if (!this.isHomeMenuItemsLoaded) {
             this.isHomeMenuItemsLoaded = true;
+
             var toModel = new JSONModel();
             toModel.loadData(sap.ui.require.toUrl("com/sample/app/ui5/demo/components/componentList.json"), null, false);
 
-            var toData = [];
             var tObj = toModel.getData();
+            var tCfgPaths = {};      
+            var toData = [];
             var tSemanticObjIdxMap = {};
             tObj.results.forEach((pItem, pIdx) => {
-              var tSemanticObj = pItem.semanticObj;            
-              var tComponentName = [pItem.domain, pItem.project, "components", pItem.componentName].join(".");
-              toData.push({text: pItem.text, key: tSemanticObj, name: tComponentName, icon: pItem.icon});
-              tSemanticObjIdxMap[tSemanticObj] = pIdx;
+              var tText = pItem.text || "";
+              var tKey = pItem.semanticObj || "";
+              var tNameSpace = pItem.nameSpace || "";
+              var tComponentName = [tNameSpace, (pItem.componentName || "")].join(".");
+              var tIcon = pItem.icon || "";
+              tCfgPaths[tNameSpace.split(".").join("/")] = "./components";
+              toData.push({text: tText, key: tKey, name: tComponentName, icon: tIcon});
+              tSemanticObjIdxMap[tKey] = pIdx;
             });
-            
-            this.oModel.setProperty("/iconTabBar/idxMap", tSemanticObjIdxMap);
+            sap.ui.loader.config({paths: tCfgPaths});
             this.oModel.setProperty("/iconTabBar/items", toData);
+            this.oModel.setProperty("/iconTabBar/idxMap", tSemanticObjIdxMap);
 
             var tSelectedKey = null;
             if (!HashChanger.getInstance().getHash()) {

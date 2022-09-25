@@ -1,11 +1,9 @@
 {
 	"results": [
 		{
-			"domain": "com.sample.app.ui5",
-			"project": "demo",
-			"key": "test",
-			"semanticObj": "TEST-display",
+			"nameSpace": "com.sample.app.ui5.demo",
 			"componentName": "TestComponent",
+			"semanticObj": "TEST-display",
 			"text": "Test",
 			"icon": "sap-icon://flight"
 		}

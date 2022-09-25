@@ -10,7 +10,7 @@ sap.ui.define([
     "use strict";
   
     return Controller.extend(
-      "com.sample.app.ui5.demo.components.TestComponent.controller.App",
+      "com.sample.app.ui5.demo.TestComponent.controller.App",
       {
         formatter: formatter,
   

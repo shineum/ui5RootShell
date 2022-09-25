@@ -1,7 +1,7 @@
 {
   "_version": "1.12.0",
   "sap.app": {
-    "id": "com.sample.app.ui5.demo.components.TestComponent",
+    "id": "com.sample.app.ui5.demo.TestComponent",
     "type": "application",
     "i18n": "i18n/i18n.properties",
     "applicationVersion": {
@@ -30,7 +30,7 @@
   },
   "sap.ui5": {
     "rootView": {
-      "viewName": "com.sample.app.ui5.demo.components.TestComponent.view.App",
+      "viewName": "com.sample.app.ui5.demo.TestComponent.view.App",
       "type": "XML",
       "async": true,
       "id": "app"
@@ -51,7 +51,7 @@
       "i18n": {
         "type": "sap.ui.model.resource.ResourceModel",
         "settings": {
-          "bundleName": "com.sample.app.ui5.demo.components.TestComponent.i18n.i18n"
+          "bundleName": "com.sample.app.ui5.demo.TestComponent.i18n.i18n"
         }
       }
     },
@@ -66,7 +66,7 @@
       "config": {
         "routerClass": "sap.m.routing.Router",
         "viewType": "XML",
-        "viewPath": "com.sample.app.ui5.demo.components.TestComponent.view",
+        "viewPath": "com.sample.app.ui5.demo.TestComponent.view",
         "controlId": "testComponentId",
         "async": true
       },
